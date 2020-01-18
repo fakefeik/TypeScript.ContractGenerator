@@ -31,7 +31,6 @@ namespace AspNetCoreExample.Generator
                     {
                         EnableExplicitNullability = true,
                         EnableOptionalProperties = false,
-                        EnumGenerationMode = EnumGenerationMode.TypeScriptEnum,
                         LinterDisableMode = LinterDisableMode.TsLint,
                         UseGlobalNullable = true,
                         NullabilityMode = NullabilityMode.Optimistic,
@@ -41,7 +40,7 @@ namespace AspNetCoreExample.Generator
                 );
             var targetPath = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName, "../../../output");
 
-            typeScriptCodeGenerator.GenerateFiles(targetPath, JavaScriptTypeChecker.TypeScript);
+            typeScriptCodeGenerator.GenerateFiles(targetPath);
         }
     }
 }
