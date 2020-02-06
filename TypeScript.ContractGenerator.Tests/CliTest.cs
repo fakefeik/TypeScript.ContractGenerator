@@ -18,6 +18,7 @@ namespace SkbKontur.TypeScript.ContractGenerator.Tests
             BuildProjectByPath($"{pathToSlnDirectory}/AspNetCoreExample.Generator/AspNetCoreExample.Generator.csproj");
             BuildProjectByPath($"{pathToSlnDirectory}/TypeScript.ContractGenerator.Cli/TypeScript.ContractGenerator.Cli.csproj");
 
+            Assert.Fail("Тулза пока не умеет работать не в Watcher-mode");
             RunCmdCommand($"dotnet {pathToCliDirectory}/SkbKontur.TypeScript.ContractGenerator.Cli.dll " +
                           $"-a {pathToAspNetCoreExampleGeneratorAssemblyDirectory}/AspNetCoreExample.Generator.dll " +
                           $"-o {TestContext.CurrentContext.TestDirectory}/cliOutput " +
